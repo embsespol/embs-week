@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMBS Week 2026 · 2da edición · 23 – 27 de noviembre</title>
+  <meta name="description" content="EMBS Week 2026, segunda edición. Del 23 al 27 de noviembre: charlas y workshops de ingeniería biomédica y biotecnología en la Universidad Politécnica Salesiana y la ESPOL, Guayaquil.">
+  <meta name="theme-color" content="#25282C">
+  <link rel="icon" type="image/png" href="assets/img/logos/embs-week.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Iconos (sprite SVG) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.25" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5.2l3.2 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+</svg>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ NAVEGACIÓN ============ -->
+<header class="nav" data-nav>
+  <div class="nav__bar wrap">
+    <a class="nav__brand" href="#inicio" aria-label="EMBS Week, ir al inicio">
+      <img src="assets/img/logos/embs-week.png" alt="" width="930" height="345">
+    </a>
+    <nav class="nav__menu" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#evento">Evento</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#sedes">Sedes</a></li>
+        <li><a href="concurso.html">Concurso</a></li>
+        <li><a class="nav__cta" href="#registro">Registro</a></li>
+        <!-- Etapa 2/3: <li><a href="#participa">Participa</a></li> <li><a href="#galeria">Galería</a></li> -->
+      </ul>
+          </nav>
+    <button class="nav__burger" type="button" aria-expanded="false" aria-controls="menu" data-burger>
+      <span class="sr-only">Abrir menú</span>
+      <span class="nav__burger-lines" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ INICIO ============ -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__deco" aria-hidden="true">
+      <span class="orb orb--purple"></span>
+      <span class="orb orb--petrol"></span>
+      <span class="orb orb--leaf"></span>
+      <span class="orb orb--purple-sm"></span>
+      <span class="ring ring--a"></span>
+      <span class="ring ring--b"></span>
+      <span class="ring ring--c"></span>
+      <span class="dots dots--5x6 dots--tl"></span>
+      <span class="dots dots--3x5 dots--r"></span>
+      <span class="dots dots--3x5 dots--l"></span>
+      <span class="dots dots--3x5 dots--br"></span>
+    </div>
+
+    <div class="hero__content wrap">
+      <h1 id="hero-title" class="hero__logo">
+        <img src="assets/img/logos/embs-week.png" alt="IE³ EMBS Week · 2da edición" width="930" height="345">
+      </h1>
+      <p class="hero__tagline">Transformando conocimiento <br class="br-sm">en <span class="grad-word">bienestar</span></p>
+      <p class="pill">23 – 27 de noviembre <span class="pill__sep" aria-hidden="true">·</span> 2026</p>
+
+      <nav class="week" aria-label="Días del evento">
+        <ol>
+          <li><a href="#dia-1" data-open-day="dia-1" style="--c1:#285B69;--c2:#58B9B5"><span class="week__dow">Lun</span><span class="week__num">23</span><span class="week__venue">UPS</span></a></li>
+          <li><a href="#dia-2" data-open-day="dia-2" style="--c1:#65952D;--c2:#8BD329"><span class="week__dow">Mar</span><span class="week__num">24</span><span class="week__venue">ESPOL</span></a></li>
+          <li><a href="#dia-3" data-open-day="dia-3" style="--c1:#65952D;--c2:#8BD329"><span class="week__dow">Mié</span><span class="week__num">25</span><span class="week__venue">ESPOL</span></a></li>
+          <li><a href="#dia-4" data-open-day="dia-4" style="--c1:#702B83;--c2:#D9BDE1"><span class="week__dow">Jue</span><span class="week__num">26</span><span class="week__venue">ESPOL</span></a></li>
+          <li><a href="#dia-5" data-open-day="dia-5" style="--c1:#702B83;--c2:#D9BDE1"><span class="week__dow">Vie</span><span class="week__num">27</span><span class="week__venue">UPS</span></a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <a class="hero__scroll" href="#evento"><span>Descubre</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </section>
+
+  <!-- ============ SOBRE EL EVENTO ============ -->
+  <section class="about" id="evento" aria-labelledby="about-title">
+    <div class="wrap about__grid">
+      <div class="about__text">
+        <p class="eyebrow eyebrow--dark"><span>Sobre el evento</span></p>
+        <h2 id="about-title" class="title title--dark">Una semana para transformar conocimiento en bienestar</h2>
+        <!-- TEXTO PROVISIONAL construido solo con datos de los flyers. Reemplazar/ampliar con el texto del dossier. -->
+        <p class="lead">EMBS Week llega a su segunda edición con una semana de charlas y workshops dedicada a la ingeniería biomédica y la biotecnología.</p>
+        <p>Del 23 al 27 de noviembre de 2026, diecisiete ponentes comparten su trabajo alrededor de cinco ejes: la ingeniería aplicada al entorno clínico; la biotecnología, la salud y la ecología; la biodiversidad marina; las tecnologías emergentes aplicadas a la salud; y la investigación científica y tecnológica con perspectiva latinoamericana.</p>
+        <p>Las actividades se reparten entre la Universidad Politécnica Salesiana y la Escuela Superior Politécnica del Litoral, en Guayaquil, con sesiones presenciales, híbridas y virtuales.</p>
+      </div>
+
+      <dl class="stats">
+        <div class="stat stat--purple"><dt>Días</dt><dd>05</dd></div>
+        <div class="stat stat--petrol"><dt>Ponentes</dt><dd>17</dd></div>
+        <div class="stat stat--leaf"><dt>Sedes</dt><dd>03</dd></div>
+        <div class="stat stat--ink"><dt>Edición</dt><dd>2<sup>da</sup></dd></div>
+      </dl>
+    </div>
+
+    <div class="wrap">
+      <ul class="pillars" aria-label="Organizaciones y su color en la identidad">
+        <li class="pillar" style="--c1:#702B83;--c2:#D9BDE1">
+          <span class="pillar__bar" aria-hidden="true"></span>
+          <p class="pillar__key">EMBS</p>
+          <p class="pillar__name">IEEE Engineering in Medicine &amp; Biology Society · ESPOL</p>
+        </li>
+        <li class="pillar" style="--c1:#285B69;--c2:#58B9B5">
+          <span class="pillar__bar" aria-hidden="true"></span>
+          <p class="pillar__key">Biomedicina</p>
+          <p class="pillar__name">FEUPS Biomedicina · Sede Guayaquil</p>
+        </li>
+        <li class="pillar" style="--c1:#65952D;--c2:#8BD329">
+          <span class="pillar__bar" aria-hidden="true"></span>
+          <p class="pillar__key">Biotecnología</p>
+          <p class="pillar__name">Carrera de Biotecnología · UPS Sede Guayaquil</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ AGENDA ============ -->
+  <section class="agenda" id="agenda" aria-labelledby="agenda-title">
+    <span class="ghost ghost--top" aria-hidden="true">EMBS</span>
+    <div class="hero__deco" aria-hidden="true">
+      <span class="orb orb--agenda"></span>
+      <span class="ring ring--agenda"></span>
+      <span class="dots dots--3x5 dots--agenda"></span>
+    </div>
+    <div class="wrap">
+      <p class="eyebrow"><span>Cronograma</span></p>
+      <h2 id="agenda-title" class="title">Agenda y ponentes</h2>
+      <p class="agenda__hint"><span class="hint-hover">Pasa el cursor sobre un día para ver sus ponentes; haz clic para abrir el detalle completo.</span><span class="hint-touch">Toca un día para ver sus ponentes, horarios y sede.</span></p>
+
+      <div class="days">
+
+        <!-- ===== DÍA 1 ===== -->
+        <article class="day" id="dia-1" data-day style="--c1:#285B69;--c2:#58B9B5">
+          <h3 class="day__head">
+            <button class="day__toggle" type="button" aria-expanded="false" aria-controls="dia-1-panel" id="dia-1-btn">
+              <span class="date"><span class="date__dow">Lun</span><span class="date__num">23</span></span>
+              <span class="day__info">
+                <span class="day__n">Día 1</span>
+                <span class="day__theme">Ingeniería y tecnologías aplicadas al entorno clínico</span>
+                <span class="day__venue">Universidad Politécnica Salesiana · Campus Centenario</span>
+              </span>
+              <span class="day__count">6 charlas</span>
+              <span class="day__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="day__panel" id="dia-1-panel" role="region" aria-labelledby="dia-1-btn">
+            <div class="day__inner">
+              <ul class="talks talks--3">
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/edwin-valarezo.webp" data-name="Edwin Valarezo"><span>EV</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Edwin Valarezo</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>10:00 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Democratización de la Ingeniería Biomédica</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/miguel-yapur.webp" data-name="Miguel Yapur"><span>MY</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">MSc. Miguel Yapur</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>11:00 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Accidentes Eléctricos en Áreas Médicas</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/andres-nenger.webp" data-name="Andrés Nenger"><span>AN</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">MSc. Andrés Nenger</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>01:00 PM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Esfuerzos y guías quirúrgicas en prótesis de cadera</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+              </ul>
+              <p class="pause detail">Descanso <span>12:00 PM – 01:00 PM</span></p>
+
+              <p class="block-label"><span class="block-label__tag">Noche</span> Tecnologías para el diagnóstico, la seguridad y la gestión hospitalaria</p>
+              <ul class="talks talks--3">
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/ruben-puma.webp" data-name="Ruben Puma"><span>RP</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">MSc. Ruben Puma</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>06:00 PM</span><span class="mode mode--alt">Híbrida</span></p>
+                    <p class="talk__title">Ciberseguridad en el sector de la salud pública</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/ulises-panora.webp" data-name="Ulises Pañora"><span>UP</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">MSc. Ulises Pañora</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>06:45 PM</span><span class="mode mode--alt">Híbrida</span></p>
+                    <p class="talk__title">Redes de gases medicinales y sus principales aplicaciones en entornos hospitalarios</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/jose-rendon.webp" data-name="José Rendón"><span>JR</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">MSc. José Rendón</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>07:30 PM</span><span class="mode mode--alt">Híbrida</span></p>
+                    <p class="talk__title">Ingeniería Clínica en el Entorno Hospitalario: Seguridad Eléctrica, Tecnovigilancia y Criterio Técnico Aplicado</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+              </ul>
+
+              <footer class="vband detail">
+                <span class="vband__media" style="--photo:url('assets/img/sedes/ups-centenario.webp')" aria-hidden="true"></span>
+                <span class="date date--band"><span class="date__dow">Lun</span><span class="date__num">23</span></span>
+                <span class="vband__rule" aria-hidden="true"></span>
+                <p class="vband__name">Universidad Politécnica Salesiana <span>Campus Centenario</span></p>
+              </footer>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== DÍA 2 ===== -->
+        <article class="day" id="dia-2" data-day style="--c1:#65952D;--c2:#8BD329">
+          <h3 class="day__head">
+            <button class="day__toggle" type="button" aria-expanded="false" aria-controls="dia-2-panel" id="dia-2-btn">
+              <span class="date"><span class="date__dow">Mar</span><span class="date__num">24</span></span>
+              <span class="day__info">
+                <span class="day__n">Día 2</span>
+                <span class="day__theme">Biotecnología, salud y ecología</span>
+                <span class="day__venue">ESPOL · Biblioteca Central</span>
+              </span>
+              <span class="day__count">3 charlas</span>
+              <span class="day__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="day__panel" id="dia-2-panel" role="region" aria-labelledby="dia-2-btn">
+            <div class="day__inner">
+              <ul class="talks talks--3">
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/eduardo-sanchez.webp" data-name="Eduardo Sanchez"><span>ES</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Eduardo Sanchez</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>10:00 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Biotecnología aplicada al agro y al estudio de sistemas biológicos</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/marynes-montiel.webp" data-name="Marynes Montiel"><span>MM</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">PhD. Marynes Montiel</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>11:00 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Los bacteriófagos: una alternativa para el control de bacterias resistentes</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/daniela-romero.webp" data-name="Daniela Romero"><span>DR</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Est. Daniela Romero</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>01:00 PM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title"><span class="kind">Workshop</span> Aplicación de Netlogo en patrones de biodiversidad del Ecuador</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+              </ul>
+              <p class="pause detail">Descanso <span>12:00 PM – 01:00 PM</span></p>
+              <footer class="vband detail">
+                <span class="vband__media" style="--photo:url('assets/img/sedes/espol-biblioteca.webp');--pos:50% 78%" aria-hidden="true"></span>
+                <span class="date date--band"><span class="date__dow">Mar</span><span class="date__num">24</span></span>
+                <span class="vband__rule" aria-hidden="true"></span>
+                <p class="vband__name">Escuela Superior Politécnica del Litoral <span>Biblioteca Central</span></p>
+              </footer>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== DÍA 3 ===== -->
+        <article class="day" id="dia-3" data-day style="--c1:#65952D;--c2:#8BD329">
+          <h3 class="day__head">
+            <button class="day__toggle" type="button" aria-expanded="false" aria-controls="dia-3-panel" id="dia-3-btn">
+              <span class="date"><span class="date__dow">Mié</span><span class="date__num">25</span></span>
+              <span class="day__info">
+                <span class="day__n">Día 3</span>
+                <span class="day__theme">Biodiversidad marina: explorando el potencial del océano</span>
+                <span class="day__venue">ESPOL · Biblioteca Central</span>
+              </span>
+              <span class="day__count">2 charlas</span>
+              <span class="day__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="day__panel" id="dia-3-panel" role="region" aria-labelledby="dia-3-btn">
+            <div class="day__inner">
+              <ul class="talks talks--2">
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/karla-jaramillo.webp" data-name="Karla Jaramillo"><span>KJ</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Karla Jaramillo</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>10:00 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Revelando la biodiversidad oculta del océano: taxonomía integrativa y biodescubrimiento marino en el Pacífico Oriental Tropical</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/janeth-galarza.webp" data-name="Janeth Galarza"><span>JG</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Janeth Galarza</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>11:00 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Biotecnología de microalgas nativas: inducción de carotenoides en <i>Dunaliella</i> sp. y su potencial aplicación en la nutrición y desarrollo de peces y crustáceos</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+              </ul>
+              <footer class="vband detail">
+                <span class="vband__media" style="--photo:url('assets/img/sedes/espol-biblioteca.webp');--pos:50% 78%" aria-hidden="true"></span>
+                <span class="date date--band"><span class="date__dow">Mié</span><span class="date__num">25</span></span>
+                <span class="vband__rule" aria-hidden="true"></span>
+                <p class="vband__name">Escuela Superior Politécnica del Litoral <span>Biblioteca Central</span></p>
+              </footer>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== DÍA 4 ===== -->
+        <article class="day" id="dia-4" data-day style="--c1:#702B83;--c2:#D9BDE1">
+          <h3 class="day__head">
+            <button class="day__toggle" type="button" aria-expanded="false" aria-controls="dia-4-panel" id="dia-4-btn">
+              <span class="date"><span class="date__dow">Jue</span><span class="date__num">26</span></span>
+              <span class="day__info">
+                <span class="day__n">Día 4</span>
+                <span class="day__theme">Tecnologías emergentes aplicadas a la salud</span>
+                <span class="day__venue">ESPOL · Biblioteca Central</span>
+              </span>
+              <span class="day__count">4 charlas</span>
+              <span class="day__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="day__panel" id="dia-4-panel" role="region" aria-labelledby="dia-4-btn">
+            <div class="day__inner">
+              <ul class="talks talks--4">
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/jonathan-zambrano.webp" data-name="Jonathan Zambrano"><span>JZ</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Est. Jonathan Zambrano</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>09:30 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title"><span class="kind">Workshop</span> Deep learning y Grad-CAM en resonancias cerebrales</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/darwin-caina.webp" data-name="Darwin Caina"><span>DC</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Darwin Caina</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>11:00 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Tecnologías emergentes para el tratamiento de la Diabetes</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/michelle-viscaino.webp" data-name="Michelle Viscaino"><span>MV</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Michelle Viscaino</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>01:00 PM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Ver, integrar y predecir: sistemas inteligentes multimodales en el apoyo al diagnóstico clínico</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/andres-navarro.webp" data-name="Andres Navarro"><span>AN</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Andres Navarro</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>07:00 PM</span><span class="mode mode--alt">Virtual</span></p>
+                    <p class="talk__title">IA y tecnologías de apoyo diagnóstico para Parkinson</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+              </ul>
+              <p class="pause detail">Descanso <span>12:00 PM – 01:00 PM</span></p>
+              <footer class="vband detail">
+                <span class="vband__media" style="--photo:url('assets/img/sedes/espol-biblioteca.webp');--pos:50% 78%" aria-hidden="true"></span>
+                <span class="date date--band"><span class="date__dow">Jue</span><span class="date__num">26</span></span>
+                <span class="vband__rule" aria-hidden="true"></span>
+                <p class="vband__name">Escuela Superior Politécnica del Litoral <span>Biblioteca Central</span></p>
+              </footer>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== DÍA 5 ===== -->
+        <article class="day" id="dia-5" data-day style="--c1:#702B83;--c2:#D9BDE1">
+          <h3 class="day__head">
+            <button class="day__toggle" type="button" aria-expanded="false" aria-controls="dia-5-panel" id="dia-5-btn">
+              <span class="date"><span class="date__dow">Vie</span><span class="date__num">27</span></span>
+              <span class="day__info">
+                <span class="day__n">Día 5</span>
+                <span class="day__theme">Investigación científica y tecnológica: perspectivas para Latinoamérica</span>
+                <span class="day__venue">Universidad Politécnica Salesiana · Campus María Auxiliadora</span>
+              </span>
+              <span class="day__count">3 sesiones</span>
+              <span class="day__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="day__panel" id="dia-5-panel" role="region" aria-labelledby="dia-5-btn">
+            <div class="day__inner">
+              <ul class="talks talks--3">
+                <li class="talk talk--group">
+                  <figure class="avatar avatar--group" data-photo="" data-name="Sesiones temáticas">
+                    <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="7" fill="currentColor"/><path d="M11 38c0-7.2 5.8-12 13-12s13 4.8 13 12z" fill="currentColor"/><circle cx="11" cy="20" r="5" fill="currentColor" opacity=".55"/><circle cx="37" cy="20" r="5" fill="currentColor" opacity=".55"/></svg>
+                  </figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Sesiones temáticas</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>09:30 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Espacios académicos para explorar distintas áreas de la Ingeniería Biomédica y la Biotecnología</p>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/fernanda-bertuccez.webp" data-name="Fernanda Bertuccez"><span>FB</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Fernanda Bertuccez</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>10:30 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Innovación en medicina reproductiva: análisis de datos mediante IA y aplicaciones especializadas</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+                <li class="talk">
+                  <figure class="avatar" data-photo="assets/img/ponentes/monica-huerta.webp" data-name="Mónica Huerta"><span>MH</span></figure>
+                  <div class="talk__body">
+                    <p class="talk__name">Ph.D. Mónica Huerta</p>
+                    <p class="talk__meta"><span class="time"><svg aria-hidden="true"><use href="#i-clock"/></svg>11:20 AM</span><span class="mode">Presencial</span></p>
+                    <p class="talk__title">Retos para el desarrollo de la Ingeniería Biomédica en Latinoamérica</p>
+                    <a class="talk__cta" data-registro="" href="#" hidden>Registrarme</a>
+                  </div>
+                </li>
+              </ul>
+              <p class="pause pause--end detail">Cierre <span>12:00 PM</span></p>
+              <footer class="vband detail">
+                <span class="vband__media" style="--photo:url('assets/img/sedes/ups-maria-auxiliadora.webp');--pos:60% 22%" aria-hidden="true"></span>
+                <span class="date date--band"><span class="date__dow">Vie</span><span class="date__num">27</span></span>
+                <span class="vband__rule" aria-hidden="true"></span>
+                <p class="vband__name">Universidad Politécnica Salesiana <span>Campus María Auxiliadora</span></p>
+              </footer>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ REGISTRO ============ -->
+  <section class="register" id="registro" aria-labelledby="register-title">
+    <div class="wrap">
+      <div class="register__card">
+        <div class="hero__deco" aria-hidden="true">
+          <span class="ring ring--register"></span>
+          <span class="dots dots--3x5 dots--register"></span>
+        </div>
+        <div class="register__text">
+          <p class="eyebrow"><span>Registro</span></p>
+          <h2 id="register-title" class="register__title">Inscríbete en EMBS Week</h2>
+          <p class="register__lead">Del 23 al 27 de noviembre de 2026. Completa el formulario y asegura tu lugar.</p>
+        </div>
+        <a class="register__btn" href="https://forms.gle/UhrchsQMtazd2Gvs6" target="_blank" rel="noopener">
+          <span>Ir al formulario</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+          <span class="sr-only">(se abre en una pestaña nueva)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCURSO DE FOTOGRAFÍA ============ -->
+  <section class="register" id="concurso" aria-labelledby="contest-title">
+    <div class="wrap">
+      <div class="register__card register__card--contest">
+        <div class="hero__deco" aria-hidden="true">
+          <span class="ring ring--register"></span>
+          <span class="dots dots--3x5 dots--register"></span>
+        </div>
+        <div class="register__text">
+          <p class="eyebrow"><span>Concurso de fotografía</span></p>
+          <h2 id="contest-title" class="register__title">Captura la EMBS Week</h2>
+          <p class="register__lead">Sube tus fotos del evento y dale like a tus favoritas. Fotos y votos hasta el 29 de noviembre.</p>
+        </div>
+        <div class="register__actions">
+          <a class="btn btn--white" href="concurso.html#subir"><span>Subir mi foto</span></a>
+          <a class="btn btn--ghost" href="concurso.html#galeria"><span>Ver galería</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEDES ============ -->
+  <section class="venues" id="sedes" aria-labelledby="venues-title">
+    <div class="hero__deco" aria-hidden="true">
+      <span class="ring ring--venues"></span>
+      <span class="dots dots--3x5 dots--venues"></span>
+    </div>
+    <div class="wrap">
+      <p class="eyebrow"><span>Sedes</span></p>
+      <h2 id="venues-title" class="title">Tres espacios, una semana</h2>
+    </div>
+
+    <div class="venue-list">
+      <!-- data-photo: ruta de la fotografía de la sede (etapa 2), p. ej. assets/img/sedes/ups-centenario.jpg -->
+      <article class="venue" data-photo="assets/img/sedes/ups-centenario.webp" style="--c1:#285B69;--c2:#58B9B5">
+        <div class="venue__media" aria-hidden="true"></div>
+        <div class="venue__row wrap">
+          <div class="venue__dates">
+            <span class="date"><span class="date__dow">Lun</span><span class="date__num">23</span></span>
+          </div>
+          <span class="vband__rule" aria-hidden="true"></span>
+          <div class="venue__text">
+            <h3 class="venue__name">Universidad Politécnica Salesiana <span>Campus Centenario</span></h3>
+            <ul class="venue__days">
+              <li><b>Día 1 · Mañana</b> Ingeniería y tecnologías aplicadas al entorno clínico</li>
+              <li><b>Día 1 · Noche</b> Tecnologías para el diagnóstico, la seguridad y la gestión hospitalaria</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="venue venue--espol" data-photo="assets/img/sedes/espol-biblioteca.webp" style="--pos:50% 78%;--c1:#65952D;--c2:#8BD329">
+        <div class="venue__media" aria-hidden="true"></div>
+        <div class="venue__row wrap">
+          <div class="venue__dates">
+            <span class="date"><span class="date__dow">Mar</span><span class="date__num">24</span></span>
+            <span class="date"><span class="date__dow">Mié</span><span class="date__num">25</span></span>
+            <span class="date date--purple"><span class="date__dow">Jue</span><span class="date__num">26</span></span>
+          </div>
+          <span class="vband__rule" aria-hidden="true"></span>
+          <div class="venue__text">
+            <h3 class="venue__name">Escuela Superior Politécnica del Litoral <span>Biblioteca Central</span></h3>
+            <ul class="venue__days">
+              <li><b>Día 2</b> Biotecnología, salud y ecología</li>
+              <li><b>Día 3</b> Biodiversidad marina: explorando el potencial del océano</li>
+              <li><b>Día 4</b> Tecnologías emergentes aplicadas a la salud</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="venue" data-photo="assets/img/sedes/ups-maria-auxiliadora.webp" style="--pos:60% 22%;--c1:#702B83;--c2:#D9BDE1">
+        <div class="venue__media" aria-hidden="true"></div>
+        <div class="venue__row wrap">
+          <div class="venue__dates">
+            <span class="date"><span class="date__dow">Vie</span><span class="date__num">27</span></span>
+          </div>
+          <span class="vband__rule" aria-hidden="true"></span>
+          <div class="venue__text">
+            <h3 class="venue__name">Universidad Politécnica Salesiana <span>Campus María Auxiliadora</span></h3>
+            <ul class="venue__days">
+              <li><b>Día 5</b> Investigación científica y tecnológica: perspectivas para Latinoamérica</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Etapa 2: <section id="participa"> participación fotográfica </section> -->
+  <!-- Etapa 3: <section id="galeria"> galería de fotografías aprobadas y votaciones </section> -->
+
+  <!-- ============ ORGANIZAN / AUSPICIAN / APOYAN ============ -->
+  <section class="partners" id="organizan" aria-labelledby="partners-title">
+    <div class="hero__deco hero__deco--soft" aria-hidden="true">
+      <span class="orb orb--leaf"></span>
+      <span class="orb orb--purple-sm"></span>
+      <span class="ring ring--partners"></span>
+      <span class="dots dots--3x5 dots--r"></span>
+    </div>
+    <div class="wrap">
+      <h2 id="partners-title" class="sr-only">Organizadores, auspiciantes y aliados</h2>
+
+      <div class="partners__group">
+        <p class="eyebrow eyebrow--center"><span>Organizado por</span></p>
+        <ul class="logos logos--lg">
+          <li><img src="assets/img/logos/feups-biomedicina.png" alt="FEUPS Biomedicina, Sede Guayaquil" width="1018" height="423" loading="lazy"></li>
+          <li><img src="assets/img/logos/ieee-embs-espol.png" alt="IEEE Engineering in Medicine and Biology Society, Escuela Superior Politécnica del Litoral" width="989" height="452" loading="lazy"></li>
+          <li class="logo--wide"><img src="assets/img/logos/ups-biotecnologia.png" alt="Universidad Politécnica Salesiana, Carrera de Biotecnología, Sede Guayaquil" width="942" height="157" loading="lazy"></li>
+        </ul>
+      </div>
+
+      <div class="partners__group">
+        <p class="eyebrow eyebrow--center"><span>Auspiciado por</span></p>
+        <ul class="logos">
+          <li><img src="assets/img/logos/blanco-sa.png" alt="Blanco S.A., Bio-electrónica, equipos médicos" width="976" height="814" loading="lazy"></li>
+          <li><img src="assets/img/logos/rapidiagnostics.png" alt="RapiDiagnostics" width="837" height="432" loading="lazy"></li>
+          <li><img src="assets/img/logos/ieee-cis-ecuador.png" alt="IEEE Computational Intelligence Society, Ecuadorian Chapter" width="982" height="457" loading="lazy"></li>
+          <li class="logo--wide"><img src="assets/img/logos/ieee-seccion-ecuador.png" alt="IEEE Sección Ecuador" width="988" height="202" loading="lazy"></li>
+        </ul>
+      </div>
+
+      <div class="partners__group">
+        <p class="eyebrow eyebrow--center"><span>Con el apoyo de</span></p>
+        <ul class="logos logos--single">
+          <li><img src="assets/img/logos/ieee-espol-sb.png" alt="IEEE Escuela Superior Politécnica del Litoral Student Branch" width="898" height="390" loading="lazy"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ PIE ============ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <img class="footer__logo" src="assets/img/logos/embs-week.png" alt="IE³ EMBS Week · 2da edición" width="930" height="345" loading="lazy">
+    <div>
+      <p class="footer__tag">Transformando conocimiento en <span class="grad-word">bienestar</span></p>
+      <p class="footer__date">23 – 27 de noviembre de 2026 · Guayaquil</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <ul class="footer__nav">
+        <li><a href="#evento">Evento</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#sedes">Sedes</a></li>
+        <li><a href="#organizan">Organizan</a></li>
+        <li><a href="#registro">Registro</a></li>
+        <li><a href="concurso.html">Concurso</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="wrap footer__copy">© 2026 EMBS Week · 2da edición</p>
+  <span class="ghost ghost--bottom" aria-hidden="true">WEEK</span>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
