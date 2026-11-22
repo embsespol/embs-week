@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concurso de fotografía · EMBS Week 2026</title>
+  <meta name="description" content="Concurso de fotografía de EMBS Week 2026: sube tus fotos del evento y vota por tus favoritas.">
+  <meta name="theme-color" content="#0C0D0F">
+  <link rel="icon" type="image/png" href="assets/img/logos/embs-week.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-contest">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.4C1.4 7.6 3.6 4 7.1 4c2 0 3.6 1.1 4.9 2.9C13.3 5.1 14.9 4 16.9 4c3.5 0 5.7 3.6 4.4 7.1-1.8 4.8-9.3 9.4-9.3 9.4z" fill="var(--heart-fill, none)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></symbol>
+</svg>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav is-scrolled" data-nav>
+  <div class="nav__bar wrap">
+    <a class="nav__brand" href="index.html" aria-label="EMBS Week, ir al inicio">
+      <img src="assets/img/logos/embs-week.png" alt="" width="930" height="345">
+    </a>
+    <nav class="nav__menu" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="index.html#evento">Evento</a></li>
+        <li><a href="index.html#agenda">Agenda</a></li>
+        <li><a href="index.html#sedes">Sedes</a></li>
+        <li><a href="concurso.html" aria-current="page">Concurso</a></li>
+        <li><a class="nav__cta" href="index.html#registro">Registro</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" type="button" aria-expanded="false" aria-controls="menu" data-burger>
+      <span class="sr-only">Abrir menú</span>
+      <span class="nav__burger-lines" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="c-hero" aria-labelledby="c-title">
+    <div class="hero__deco" aria-hidden="true">
+      <span class="orb orb--purple"></span>
+      <span class="ring ring--b"></span>
+      <span class="ring ring--c"></span>
+      <span class="dots dots--3x5 dots--r"></span>
+    </div>
+    <div class="wrap c-hero__inner">
+      <p class="eyebrow"><span>Concurso de fotografía</span></p>
+      <h1 id="c-title" class="title">Captura la <span class="grad-word">EMBS Week</span></h1>
+      <p class="c-hero__lead">Comparte tus fotos del evento y dale like a tus favoritas. Puedes votar por todas las fotos que quieras.</p>
+
+      <ol class="c-steps">
+        <li><b>01</b><span>Sube tu foto con un título</span></li>
+        <li><b>02</b><span>La organización la revisa</span></li>
+        <li><b>03</b><span>Todos votan con un like</span></li>
+      </ol>
+
+      <div class="c-hero__actions">
+        <button class="btn btn--white" type="button" data-open-upload>
+          <svg aria-hidden="true"><use href="#i-camera"/></svg><span>Subir mi foto</span>
+        </button>
+        <a class="btn btn--ghost" href="#galeria"><span>Ver galería</span><svg aria-hidden="true" class="rot90"><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="c-hero__note" data-deadline>Recibimos fotos y votos hasta el 29 de noviembre de 2026, 23:59. La foto ganadora se anunciará en nuestras redes sociales.</p>
+
+      <div class="mine" data-mine hidden>
+        <p class="mine__label">Tus envíos</p>
+        <ul class="mine__list" data-mine-list></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="galeria" aria-labelledby="g-title">
+    <div class="wrap">
+      <div class="gallery__head">
+        <h2 id="g-title" class="title">Galería</h2>
+        <p class="gallery__note">El orden de las fotos cambia en cada visita para que todas tengan la misma oportunidad.</p>
+      </div>
+      <div class="gallery__grid" data-grid aria-live="polite" aria-busy="true">
+        <div class="shot shot--skeleton"></div><div class="shot shot--skeleton"></div><div class="shot shot--skeleton"></div>
+        <div class="shot shot--skeleton"></div><div class="shot shot--skeleton"></div><div class="shot shot--skeleton"></div>
+      </div>
+      <div class="gallery__empty" data-empty hidden>
+        <svg aria-hidden="true"><use href="#i-camera"/></svg>
+        <p>Todavía no hay fotos publicadas.</p>
+        <button class="btn btn--white" type="button" data-open-upload><span>Sé el primero en subir una</span></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Formulario de subida -->
+<dialog class="sheet" data-upload aria-labelledby="u-title">
+  <form class="sheet__body" data-form novalidate>
+    <header class="sheet__head">
+      <h2 id="u-title">Subir mi foto</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Cerrar"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </header>
+
+    <label class="drop" data-drop>
+      <input type="file" accept="image/*" data-file required>
+      <span class="drop__empty">
+        <svg aria-hidden="true"><use href="#i-camera"/></svg>
+        <b>Elige una foto</b>
+        <span>JPG, PNG o HEIC desde tu teléfono · una foto por envío</span>
+      </span>
+      <img class="drop__preview" alt="Vista previa de tu foto" data-preview hidden>
+    </label>
+    <p class="field__error" data-error-for="file"></p>
+
+    <div class="field">
+      <label for="f-title">Título de la foto <span class="req">*</span></label>
+      <input id="f-title" name="title" type="text" maxlength="60" required placeholder="Mi primera conferencia en la EMBS Week" autocomplete="off">
+      <span class="field__count" data-count>0/60</span>
+      <p class="field__error" data-error-for="title"></p>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="f-name">Tu nombre <span class="req">*</span></label>
+        <input id="f-name" name="name" type="text" maxlength="60" required autocomplete="name">
+        <p class="field__error" data-error-for="name"></p>
+      </div>
+      <div class="field">
+        <label for="f-ig">Usuario de Instagram</label>
+        <div class="field__affix"><span aria-hidden="true">@</span><input id="f-ig" name="instagram" type="text" maxlength="31" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="tu.usuario"></div>
+        <p class="field__error" data-error-for="instagram"></p>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="f-contact">Correo o teléfono de contacto <span class="req">*</span></label>
+      <input id="f-contact" name="contact" type="text" maxlength="120" required autocomplete="email">
+      <p class="field__hint">Solo lo verá la organización, para contactarte si ganas.</p>
+      <p class="field__error" data-error-for="contact"></p>
+    </div>
+
+    <fieldset class="consents">
+      <legend>¿Qué publicamos?</legend>
+      <label class="check check--req">
+        <input type="checkbox" name="consent" required>
+        <span>Autorizo a la organización de EMBS Week a publicar esta fotografía y su título en esta página y en sus redes sociales, y declaro que la tomé yo. <span class="req">*</span></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="show_name">
+        <span>Mostrar mi nombre junto a la foto</span>
+      </label>
+      <label class="check" data-ig-check>
+        <input type="checkbox" name="show_instagram" disabled>
+        <span>Mostrar mi usuario de Instagram junto a la foto</span>
+      </label>
+      <p class="field__error" data-error-for="consent"></p>
+    </fieldset>
+
+    <p class="sheet__legal">Tus datos se usan solo para gestionar el concurso. La foto se publica después de que la organización la revisa.</p>
+
+    <div class="captcha-slot" data-captcha></div>
+    <div class="sheet__foot">
+      <p class="sheet__status" data-status role="status" aria-live="polite"></p>
+      <button class="btn btn--brand" type="submit" data-submit><span>Enviar foto</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+  </form>
+
+  <div class="sheet__done" data-done hidden>
+    <svg aria-hidden="true"><use href="#i-camera"/></svg>
+    <h2>¡Foto recibida!</h2>
+    <p>Está en revisión. Aparecerá en la galería apenas la organización la apruebe.</p>
+    <p class="sheet__legal" data-next-time></p>
+    <button class="btn btn--white" type="button" data-close>Volver a la galería</button>
+  </div>
+</dialog>
+
+<!-- Visor de fotos -->
+<dialog class="viewer" data-viewer aria-label="Visor de fotos">
+  <button class="icon-btn viewer__close" type="button" data-close aria-label="Cerrar"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="icon-btn viewer__nav viewer__nav--prev" type="button" data-prev aria-label="Foto anterior"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+  <button class="icon-btn viewer__nav viewer__nav--next" type="button" data-next aria-label="Foto siguiente"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+  <figure class="viewer__fig">
+    <img data-viewer-img alt="">
+    <figcaption class="viewer__cap">
+      <div>
+        <p class="viewer__title" data-viewer-title></p>
+        <p class="viewer__by" data-viewer-by></p>
+      </div>
+      <button class="like like--lg" type="button" data-viewer-like aria-pressed="false">
+        <svg aria-hidden="true"><use href="#i-heart"/></svg><span data-like-label>Me gusta</span>
+      </button>
+    </figcaption>
+  </figure>
+  <div class="captcha-slot captcha-slot--viewer" data-captcha></div>
+</dialog>
+
+<div class="captcha-float" data-captcha></div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<footer class="footer footer--slim">
+  <div class="wrap footer__grid">
+    <img class="footer__logo" src="assets/img/logos/embs-week.png" alt="IE³ EMBS Week · 2da edición" width="930" height="345" loading="lazy">
+    <div>
+      <p class="footer__tag">Transformando conocimiento en <span class="grad-word">bienestar</span></p>
+      <p class="footer__date">23 – 27 de noviembre de 2026 · Guayaquil</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <ul class="footer__nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#agenda">Agenda</a></li>
+        <li><a href="index.html#registro">Registro</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="wrap footer__copy">© 2026 EMBS Week · 2da edición</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<script src="script.js" defer></script>
+<script src="concurso.js" defer></script>
+</body>
+</html>

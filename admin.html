@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administración · Concurso EMBS Week 2026</title>
+  <meta name="theme-color" content="#0C0D0F">
+  <link rel="icon" type="image/png" href="assets/img/logos/embs-week.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-admin">
+
+<header class="adm-bar">
+  <div class="wrap adm-bar__in">
+    <a href="index.html" class="adm-bar__brand"><img src="assets/img/logos/embs-week.png" alt="EMBS Week" width="930" height="345"></a>
+    <p class="adm-bar__title">Panel del concurso</p>
+    <div class="adm-bar__user" data-userbox hidden>
+      <span data-user-email></span>
+      <button class="btn btn--ghost btn--sm" type="button" data-logout>Cerrar sesión</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap adm">
+  <!-- Inicio de sesión -->
+  <section class="adm-login" data-login>
+    <h1 class="title">Acceso de administradores</h1>
+    <form class="adm-login__form" data-login-form novalidate>
+      <div class="field">
+        <label for="a-email">Correo</label>
+        <input id="a-email" name="email" type="email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="a-pass">Contraseña</label>
+        <input id="a-pass" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <div class="captcha-slot captcha-slot--inline" data-captcha></div>
+      <p class="field__error" data-login-error role="alert"></p>
+      <button class="btn btn--brand" type="submit" data-login-btn><span>Entrar</span></button>
+    </form>
+  </section>
+
+  <!-- Panel -->
+  <section class="adm-panel" data-panel hidden>
+    <div class="adm-tabs" role="tablist" aria-label="Estado de las fotos">
+      <button role="tab" type="button" class="adm-tab" data-tab="pending" aria-selected="true">Pendientes <b data-n="pending">0</b></button>
+      <button role="tab" type="button" class="adm-tab" data-tab="approved" aria-selected="false">Publicadas <b data-n="approved">0</b></button>
+      <button role="tab" type="button" class="adm-tab" data-tab="rejected" aria-selected="false">Rechazadas <b data-n="rejected">0</b></button>
+      <button role="tab" type="button" class="adm-tab" data-tab="ranking" aria-selected="false">Ranking de likes</button>
+      <span class="adm-tabs__spacer"></span>
+      <button class="btn btn--ghost btn--sm" type="button" data-refresh>Actualizar</button>
+      <button class="btn btn--ghost btn--sm" type="button" data-export>Descargar CSV</button>
+    </div>
+    <p class="adm-updated" data-updated></p>
+    <div class="adm-list" data-list></div>
+  </section>
+</main>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<script src="admin.js" defer></script>
+</body>
+</html>
