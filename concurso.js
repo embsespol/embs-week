@@ -25,11 +25,11 @@
   };
   const friendly = (err) => {
     const m = String(err?.message || err || "");
-    if (m.includes("COOLDOWN")) return `Ya enviaste una foto hace poco. Puedes enviar otra cada ${C.cooldownMinutes} minutos.`;
+    if (m.includes("TOO_MANY") || m.includes("COOLDOWN")) return "Enviaste muchas fotos en poco tiempo. Espera un rato e inténtalo de nuevo.";
     if (m.includes("CONTEST_CLOSED")) return "El concurso ya cerró. ¡Gracias por participar!";
     if (m.includes("TOO_FAST")) return "Vas muy rápido. Espera un momento y vuelve a intentarlo.";
     if (m.includes("row-level security") || m.includes("Unauthorized") || m.includes("403"))
-      return `No pudimos subir la foto. Si acabas de enviar otra, espera ${C.cooldownMinutes} minutos.`;
+      return "No pudimos subir la foto. Inténtalo de nuevo en unos minutos.";
     if (m.includes("captcha")) return "No pudimos verificar que eres una persona. Recarga la página e inténtalo de nuevo.";
     if (m.includes("Failed to fetch") || m.includes("NetworkError")) return "Sin conexión. Revisa tu internet e inténtalo de nuevo.";
     return "Algo salió mal. Inténtalo de nuevo en un momento.";
@@ -234,7 +234,6 @@
   const drop = $("[data-drop]");
   const statusEl = $("[data-status]");
   const submitBtn = $("[data-submit]");
-  const LAST_KEY = "embs-week-last-upload";
   let prepared = null; // { full, thumb, width, height }
 
   const setErr = (name, msg) => { const el = $(`[data-error-for="${name}"]`); if (el) el.textContent = msg || ""; };
@@ -318,13 +317,8 @@
     return ok;
   };
 
-  const lastUpload = () => Number(localStorage.getItem(LAST_KEY) || 0);
-  const waitLeft = () => Math.max(0, lastUpload() + C.cooldownMinutes * 60000 - Date.now());
-
   const openUpload = async () => {
     if (!isOpen()) return toast("El concurso ya cerró. ¡Gracias por participar!");
-    const left = waitLeft();
-    if (left > 0) return toast(`Ya enviaste una foto. Podrás enviar otra en ${Math.ceil(left / 60000)} min.`);
     $("[data-done]").hidden = true;
     form.hidden = false;
     statusEl.textContent = "";
@@ -332,6 +326,9 @@
     ensureSession().catch(() => {}); // prepara la sesión mientras la persona llena el formulario
   };
   $$("[data-open-upload]").forEach((b) => b.addEventListener("click", openUpload));
+  const again = Object.assign(document.createElement("button"), { type: "button", className: "btn btn--brand", textContent: "Subir otra foto" });
+  again.addEventListener("click", () => { $("[data-done]").hidden = true; form.hidden = false; statusEl.textContent = ""; });
+  $("[data-done] [data-close]").before(again);
   if (location.hash === "#subir") openUpload();
   window.addEventListener("hashchange", () => { if (location.hash === "#subir") openUpload(); });
 
@@ -362,14 +359,13 @@
         p_consent: f.consent.checked, p_width: prepared.width, p_height: prepared.height
       });
       if (error) throw error;
-      localStorage.setItem(LAST_KEY, String(Date.now()));
       form.reset();
       prepared = null;
       preview.hidden = true;
       drop.classList.remove("has-file");
       $("[data-count]").textContent = "0/60";
       form.hidden = true;
-      $("[data-next-time]").textContent = `Puedes enviar otra foto dentro de ${C.cooldownMinutes} minutos.`;
+      $("[data-next-time]").textContent = "¿Tienes otra? Puedes subirla ahora mismo.";
       $("[data-done]").hidden = false;
       loadMine();
     } catch (err) {
